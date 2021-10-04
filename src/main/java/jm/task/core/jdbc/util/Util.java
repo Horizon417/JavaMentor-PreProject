@@ -14,13 +14,9 @@ public class Util {
 
         try {
             connection = DriverManager.getConnection(DB_URL, USER, PASS);
-            System.out.println("Connection OK");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-            System.out.println("Connection error");
         }
         return connection;
     }
-
-    // реализуйте настройку соеденения с БД
 }
