@@ -41,7 +41,6 @@ public class Util {
                 properties.put(Environment.URL, "jdbc:postgresql://127.0.0.1:5432/postgres");
                 properties.put(Environment.USER, "postgres");
                 properties.put(Environment.PASS, "postgres");
-//              org.hibernate.dialect.PostgreSQLDialect
                 properties.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQLDialect");
                 properties.put(Environment.SHOW_SQL, "true");
                 properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
@@ -49,9 +48,6 @@ public class Util {
 
                 configuration.setProperties(properties);
                 configuration.addAnnotatedClass(User.class);
-
-//              ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-//                        .applySettings(configuration.getProperties()).build();
 
                 StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();
@@ -63,9 +59,4 @@ public class Util {
         }
         return sessionFactory;
     }
-
-
-
-
-
 }
